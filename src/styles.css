@@ -1,0 +1,40 @@
+:root {
+  --bg: #f7f7f8;
+  --fg: #111;
+  --muted: #666;
+  --card: #fff;
+  --border: #ddd;
+  --accent: #2563eb;
+}
+.dark {
+  --bg: #0f1115;
+  --fg: #e6e6e6;
+  --muted: #a0a0a0;
+  --card: #171922;
+  --border: #2a2e3a;
+  --accent: #60a5fa;
+}
+body { background: var(--bg); color: var(--fg); font-family: system-ui, sans-serif; }
+.container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+.toolbar, .filters { display: flex; gap: 10px; margin-bottom: 12px; }
+.toolbar input { flex: 1; padding: 8px; border: 1px solid var(--border); background: var(--card); color: var(--fg); }
+.toolbar button, .filters select { padding: 8px 10px; border: 1px solid var(--border); background: var(--card); color: var(--fg); }
+.toggle { display: flex; align-items: center; gap: 6px; }
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.card { border: 1px solid var(--border); border-radius: 8px; padding: 10px; background: var(--card); cursor: pointer; }
+.title { font-weight: 600; margin-bottom: 4px; }
+.meta { font-size: 12px; color: var(--muted); display: flex; gap: 8px; }
+.tags { margin-top: 6px; display: flex; gap: 6px; flex-wrap: wrap; }
+.tag { font-size: 11px; padding: 2px 6px; border: 1px solid var(--border); border-radius: 6px; }
+.actions { margin-top: 8px; display: flex; justify-content: space-between; align-items: center; }
+.rating { font-size: 18px; }
+.panel { position: fixed; inset: 0; background: rgba(0,0,0,0.2); display: flex; justify-content: center; align-items: center; }
+.panel-content { width: 520px; background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+.sub { color: var(--muted); margin-bottom: 12px; }
+.row { display: grid; grid-template-columns: 120px 1fr; align-items: start; gap: 10px; margin-bottom: 10px; }
+.row input, .row textarea { width: 100%; padding: 8px; border: 1px solid var(--border); background: var(--bg); color: var(--fg); }
+.ratings { display: flex; gap: 8px; }
+.ratings button { padding: 6px 10px; border: 1px solid var(--border); background: var(--card); }
+.ratings .active { border-color: var(--accent); }
+.actions button { padding: 8px 10px; }
+.actions .secondary { background: var(--bg); }
